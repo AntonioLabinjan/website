@@ -4,71 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FaceLog – AI Face Recognition App</title>
+  <meta name="description" content="FaceLog is an AI-powered face recognition app for attendance, security and automation. Ultra fast, GDPR compliant and privacy-first." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  
   <style>
     body { font-family: 'Segoe UI', sans-serif; }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white">
+  <!-- Hero Section -->
+   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-gray-900 to-black">
+    <img src="FaceLog-web/Logo.jpeg" alt="FaceLog Logo" class="w-32 md:w-48 mb-4" />
+    <p class="text-lg md:text-xl text-blue-400 mb-2">No more cards, passwords, or queues.</p>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">FaceLog</h1>
+    <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-8">
+      AI-powered face recognition built for speed, precision & trust.
+    </p>
+    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg shadow-xl transition">Request a Demo</a>
+  </section>
 
-<!-- Hero -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-gray-900 to-black">
-  <img src="FaceLog-web/Logo.jpeg" alt="FaceLog Logo" class="w-32 md:w-48 mb-6" />
-
-  <h1 class="text-4xl md:text-6xl font-bold mb-4">FaceLog</h1>
-  <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-8">
-    AI-powered face recognition built for speed, precision & trust.
-  </p>
-
-  <div>
-    <div class="mt-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="text-3xl font-semibold mb-6">FaceLog Demo Video</h3>
-      <div class="aspect-w-16 aspect-h-9">
+  <!-- Video Demo -->
+  <section class="py-20 bg-gray-900 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6" data-aos="fade-up">Watch FaceLog in Action</h3>
+      <div class="video-wrapper">
         <iframe 
           src="https://www.youtube.com/embed/hQDcAjGRHMQ" 
           title="FaceLog Demo" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen
-          class="w-full h-full rounded-lg shadow-lg">
+          allowfullscreen>
         </iframe>
       </div>
     </div>
-  </div>
+  </section>
 
-  <a href="#kontakt" class="mt-12 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg shadow-xl transition">Request a demo</a>
-</section>
-
- <!-- Why FaceLog -->
-<section class="py-20 bg-gray-800 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Why FaceLog?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-200">
-      <div data-aos="zoom-in">
-        <h3 class="text-xl font-semibold mb-2">Ultra Fast</h3>
-        <p>From scanning to identification in milliseconds – optimized for real-time performance.</p>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="100">
-        <h3 class="text-xl font-semibold mb-2">Local & Secure</h3>
-        <p>Everything is processed locally – no data goes to the cloud. User privacy is a priority.</p>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="200">
-        <h3 class="text-xl font-semibold mb-2">Smart Recognition</h3>
-        <p>Advanced CLIP+FAISS recognition with voting algorithm and motion detection for security.</p>
+  <!-- Why FaceLog -->
+  <section class="py-20 bg-gray-800 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Why FaceLog?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-200">
+        <div data-aos="zoom-in">
+          <h3 class="text-xl font-semibold mb-2">Ultra Fast</h3>
+          <p>From scanning to identification in milliseconds – optimized for real-time performance.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-2">Local & Secure</h3>
+          <p>Everything is processed locally – no data goes to the cloud. User privacy is a priority.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-2">Smart Recognition</h3>
+          <p>Advanced CLIP+FAISS recognition with voting algorithm and motion detection for security.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Showcase -->
-<section class="py-20 bg-gray-900 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Where to Use FaceLog?</h2>
-
-    <div x-data="{ slide: 0, useCases: [
+  <!-- Use Cases -->
+  <section class="py-20 bg-gray-900 px-6">
+    <div class="max-w-5xl mx-auto text-center" x-data="{ slide: 0, useCases: [
       { icon: '🕒', title: 'Work Time Tracking', desc: 'Forget cards and PINs – employees just show up and everything is recorded automatically.' },
       { icon: '🔐', title: 'Smart Security Locks', desc: 'Access only to known faces – connect with smart locks and control systems.' },
       { icon: '🧾', title: 'Kiosk Check-In', desc: 'Automatic user check-in at various venues and events.' },
@@ -79,84 +89,49 @@
       { icon: '💪', title: 'Gyms', desc: 'Members register with their face, no card or app needed.' },
       { icon: '🏨', title: 'Hotels', desc: 'Self check-in for guests without staff.' },
       { icon: '🚨', title: 'Security Systems', desc: 'Monitoring unauthorized access attempts.' },
-    ] }" class="relative">
-
-
-        <div class="overflow-hidden h-64">
-          <template x-for="(item, index) in useCases" :key="index">
-            <div x-show="slide === index" x-transition class="absolute inset-0 flex flex-col justify-center items-center px-6">
-              <div class="text-blue-400 text-5xl mb-4" x-text="item.icon"></div>
-              <h3 class="text-2xl font-semibold mb-2" x-text="item.title"></h3>
-              <p class="text-gray-300 max-w-xl" x-text="item.desc"></p>
-            </div>
-          </template>
-        </div>
-
-        <!-- Controls -->
-        <div class="mt-8 flex justify-center gap-4">
-          <button @click="slide = (slide - 1 + useCases.length) % useCases.length" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full">←</button>
-          <button @click="slide = (slide + 1) % useCases.length" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full">→</button>
-        </div>
+    ] }" x-init="setInterval(() => slide = (slide + 1) % useCases.length, 5000)">
+      <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Where to Use FaceLog?</h2>
+      <div class="overflow-hidden h-64 relative">
+        <template x-for="(item, index) in useCases" :key="index">
+          <div x-show="slide === index" x-transition class="absolute inset-0 flex flex-col justify-center items-center px-6">
+            <div class="text-blue-400 text-5xl mb-4" x-text="item.icon"></div>
+            <h3 class="text-2xl font-semibold mb-2" x-text="item.title"></h3>
+            <p class="text-gray-300 max-w-xl" x-text="item.desc"></p>
+          </div>
+        </template>
+      </div>
+      <div class="mt-8 flex justify-center gap-4">
+        <button @click="slide = (slide - 1 + useCases.length) % useCases.length" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full">←</button>
+        <button @click="slide = (slide + 1) % useCases.length" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full">→</button>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="py-20 bg-gray-800 px-6">
-  <div class="max-w-4xl mx-auto text-white" x-data="{ active: null }">
-    <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">Frequently Asked Questions (FAQ)</h2>
-
-    <template x-for="(faq, index) in [
-      { question: 'How does FaceLog protect my privacy?', answer: 'FaceLog processes all data locally on the device without sending anything to the cloud, ensuring the privacy and security of your data.' },
-      { question: 'What are the minimum technical requirements?', answer: 'FaceLog requires a modern laptop or desktop with a webcam and basic GPU support for fast recognition.' },
-      { question: 'Can I integrate FaceLog into my existing system?', answer: 'Yes, FaceLog comes with an API interface for easy integration into existing systems.' },
-      { question: 'How is the license paid?', answer: 'Licenses can be paid via monthly subscription or a one-time purchase, depending on the chosen option.' },
-      { question: 'Is there support after purchase?', answer: 'Yes, we offer 24/7 technical support via email and chat.' },
-      { question: 'Which devices does FaceLog support?', answer: 'We support Windows, macOS, and Linux devices with webcams.' },
-      { question: 'How fast does FaceLog recognize faces?', answer: 'Recognition takes only a few milliseconds thanks to optimized algorithms.' },
-      { question: 'Is an internet connection required to use FaceLog?', answer: 'Yes, FaceLog works as a web application connected to a REST API.' },
-      { question: 'Can I use FaceLog for attendance tracking in schools?', answer: 'Yes, FaceLog is ideal for automated attendance tracking of students.' },
-      { question: 'Can FaceLog recognize multiple faces at the same time?', answer: 'Currently, the system is optimized for recognizing one face at a time in real-time, but it also works with multiple faces.' },
-      { question: 'Is there a demo version to try FaceLog?', answer: 'Yes, you can request a demo version through our contact form.' },
-      { question: 'How does FaceLog handle masks or other face obstructions?', answer: 'The system uses advanced models that can recognize faces even if partially covered by a mask.' },
-      { question: 'Is FaceLog GDPR compliant?', answer: 'Yes, FaceLog is developed in accordance with GDPR data protection regulations.' },
-      { question: 'How to contact support?', answer: 'You can contact support via email, phone, or chat on our website.' },
-      { question: 'What are the advantages of FaceLog compared to other systems?', answer: 'Our system is faster, more secure, works offline, and protects user privacy.' }
-    ]" :key="index">
-      <div
-        class="mb-6 p-4 bg-gray-700 rounded-lg cursor-pointer"
-        @click="active === index ? active = null : active = index"
-        :class="{ 'bg-gray-600': active === index }"
-      >
-
-        <h3 class="text-xl font-semibold flex justify-between items-center">
-          <span x-text="faq.question"></span>
-          <svg
-            :class="{ 'rotate-180': active === index }"
-            class="w-5 h-5 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </h3>
-        <div x-show="active === index" x-transition class="mt-2 text-gray-300" x-text="faq.answer"></div>
-      </div>
-    </template>
-  </div>
-</section>
-
-
-
-</template>
-
-        <div class="border-b border-gray-700 py-4 cursor-pointer" @click="active === index ? active = null : active = index" :class="{'bg-gray-700': active === index}">
+    <div class="max-w-4xl mx-auto text-white" x-data="{ active: null }">
+      <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">Frequently Asked Questions (FAQ)</h2>
+      <template x-for="(faq, index) in [
+        { question: 'How does FaceLog protect my privacy?', answer: 'FaceLog processes all data locally on the device without sending anything to the cloud, ensuring the privacy and security of your data.' },
+        { question: 'What are the minimum technical requirements?', answer: 'FaceLog requires a modern laptop or desktop with a webcam and basic GPU support for fast recognition.' },
+        { question: 'Can I integrate FaceLog into my existing system?', answer: 'Yes, FaceLog comes with an API interface for easy integration into existing systems.' },
+        { question: 'How is the license paid?', answer: 'Licenses can be paid via monthly subscription or a one-time purchase, depending on the chosen option.' },
+        { question: 'Is there support after purchase?', answer: 'Yes, we offer 24/7 technical support via email and chat.' },
+        { question: 'Which devices does FaceLog support?', answer: 'We support Windows, macOS, and Linux devices with webcams.' },
+        { question: 'How fast does FaceLog recognize faces?', answer: 'Recognition takes only a few milliseconds thanks to optimized algorithms.' },
+        { question: 'Is an internet connection required to use FaceLog?', answer: 'Yes, FaceLog works as a web application connected to a REST API.' },
+        { question: 'Can I use FaceLog for attendance tracking in schools?', answer: 'Yes, FaceLog is ideal for automated attendance tracking of students.' },
+        { question: 'Can FaceLog recognize multiple faces at the same time?', answer: 'Currently, the system is optimized for recognizing one face at a time in real-time, but it also works with multiple faces.' },
+        { question: 'Is there a demo version to try FaceLog?', answer: 'Yes, you can request a demo version through our contact form.' },
+        { question: 'How does FaceLog handle masks or other face obstructions?', answer: 'The system uses advanced models that can recognize faces even if partially covered by a mask.' },
+        { question: 'Is FaceLog GDPR compliant?', answer: 'Yes, FaceLog is developed in accordance with GDPR data protection regulations.' },
+        { question: 'How to contact support?', answer: 'You can contact support via email, phone, or chat on our website.' },
+        { question: 'What are the advantages of FaceLog compared to other systems?', answer: 'Our system is faster, more secure, works offline, and protects user privacy.' }
+      ]" :key="index">
+        <div class="mb-6 p-4 bg-gray-700 rounded-lg cursor-pointer" @click="active === index ? active = null : active = index" :class="{ 'bg-gray-600': active === index }">
           <h3 class="text-xl font-semibold flex justify-between items-center">
             <span x-text="faq.question"></span>
-            <svg :class="{'rotate-180': active === index}" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <svg :class="{ 'rotate-180': active === index }" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </h3>
@@ -164,30 +139,27 @@
         </div>
       </template>
     </div>
+    <div class="text-center mt-12">
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg shadow-xl transition">Still have questions? Contact us</a>
+    </div>
   </section>
 
-  <!-- Contact CTA -->
-<section id="contact" class="py-20 bg-blue-700 text-white text-center px-6" x-data="{ openContact: false }">
-  <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Interested in FaceLog?</h2>
-  <p class="mb-6 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-    Send an inquiry or request a demo – I respond within 24 hours.
-  </p>
-  <!-- This button toggles the contact info section -->
-  <button @click="openContact = !openContact" class="bg-white text-blue-800 px-8 py-4 rounded-xl font-semibold shadow-xl hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="200">
-    Contact Me
-  </button>
-
-  <!-- Hidden contact details -->
-  <div x-show="openContact" x-transition class="mt-8 bg-blue-600 p-6 rounded-xl max-w-xl mx-auto text-left text-white">
-    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
-    <p>Email: <a href="mailto:alabinjan6@gmail.com" class="underline">alabinjan6@gmail.com</a></p>
-    <p>Phone: <a href="tel:+385912345678" class="underline">+385 91 913 5146</a></p>
-    <p>Github: <a href="https://www.github.com/AntonioLabinjan" target="_blank" rel="noopener" class="underline">github.com/AntonioLabinjan</a></p>
-  </div>
-
-
-</section>
-
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-blue-700 text-white text-center px-6" x-data="{ openContact: false }">
+    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Interested in FaceLog?</h2>
+    <p class="mb-6 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Send an inquiry or request a demo – I respond within 24 hours.
+    </p>
+    <button @click="openContact = !openContact" class="bg-white text-blue-800 px-8 py-4 rounded-xl font-semibold shadow-xl hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="200">
+      Contact Me
+    </button>
+    <div x-show="openContact" x-transition class="mt-8 bg-blue-600 p-6 rounded-xl max-w-xl mx-auto text-left text-white">
+      <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+      <p>Email: <a href="mailto:alabinjan6@gmail.com" class="underline">alabinjan6@gmail.com</a></p>
+      <p>Phone: <a href="tel:+385919135146" class="underline">+385 91 913 5146</a></p>
+      <p>GitHub: <a href="https://www.github.com/AntonioLabinjan" target="_blank" rel="noopener" class="underline">github.com/AntonioLabinjan</a></p>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="py-6 text-center text-gray-400 text-sm bg-gray-900">
